@@ -1,0 +1,15 @@
+flask 
+twilio 
+google-generativeai 
+python-dotenv
+streamlit 
+speechrecognition 
+gtts 
+deep-translator 
+pydub 
+pygame
+google-auth 
+google-auth-oauthlib 
+google-auth-httplib2 
+google-api-python-client
+langchain-google-genai
