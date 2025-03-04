@@ -96,5 +96,5 @@ Ensure you have **Python 3.8+** installed.
 
 ## Contributors
 - **GARVIT** (Project Lead)
-- **Team Members** (If applicable)
+
 
