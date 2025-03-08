@@ -43,11 +43,12 @@
 - Python **3.8+**
 - Twilio Account for automated calling
 - Google Cloud account for API access
+- Ngrok Account for tunneling
 
 ### Steps
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repo/AI_cold_calling_agent.git
+   git clone https://github.com/garvit5555/AI_cold_calling_agent.git
    cd AI_cold_calling_agent
    ```
 2. **Create a virtual environment:** (Optional but recommended)
@@ -73,9 +74,30 @@
      TWILIO_PHONE_NUMBER=your-twilio-phone-number
      NGROK_URL=your-ngrok-public-url
      ```
-5. **Run the application:**
+
+## Running the Application
+
+There are different ways to run the code for different scenarios:
+
+### **For Payment Follow-ups Scenario**
+1. Open **three terminals**:
+   - **First Terminal:** Run the Flask server:
+     ```bash
+     python payment_followup.py
+     ```
+   - **Second Terminal:** Run Ngrok on port 5000 (after authenticating with your Ngrok token):
+     ```bash
+     ngrok http 5000
+     ```
+   - **Third Terminal:** Run Streamlit UI:
+     ```bash
+     streamlit run main.py
+     ```
+
+### **For Candidate Screening and Demo Scheduling Scenario**
+Simply run:
    ```bash
-   python app.py
+   streamlit run main.py
    ```
 
 ## Usage
@@ -86,10 +108,10 @@
 
 ### Demo Scheduling
 - Call `demo_scheduling_tool(user_input)` to check user availability and schedule a demo session.
-- The event is created in Google Calendar, and the details are stored in `events.json`.
+- The event is created in Google Calendar, and the details are stored in `events_scheduled.json`.
 
 ### Payment Follow-ups
-- Call `call_all_customers()` to initiate automated voice calls for pending payments.
+- Call `call_all_customers()` to initiate automated voice calls for pending payments to all the customers in the `payment_data.json`.
 - AI interacts with the customer based on their responses and updates the status accordingly.
 
 ## API Endpoints
@@ -101,15 +123,23 @@
 | `/schedule-demo`     | `POST` | Schedules a demo session using AI  |
 
 ## Future Enhancements
-- **Multi-language support** to cater to diverse users.
-- **Improved AI response personalization** for a more human-like experience.
-- **CRM integration** to store and analyze customer data for better interaction.
-- **Real-time sentiment analysis** to assess user reactions during calls.
-- **Call transcription & analytics** for monitoring and improving service quality.
+
+- **HubSpot API Integration** for retrieving customer details in the payment follow-up scenario.
+- **Sentiment Analysis** for scoring responses in the interview process.
+- **Email Notifications** for scheduled events in the demo scheduling scenario.
+- **Conversation Memory** to ask interview questions based on previous responses.
+- **Enhanced Customer Pitching** to encourage users to see the ERP demo.
+- **CSV Data Storage** for storing scheduled event details.
+
+## Challenges Faced
+
+1. **Exhaustion of Gemini API Key** multiple times.
+2. **Using Twilio** for making payment calls via Ngrok.
+3. **Google Calendar API Implementation** to send scheduled event details to the user's calendar.
+4. **Multiple Event Scheduling Issues** (as shown in the video).
+
+## Video Demo
+[Click here to watch the demo](https://drive.google.com/file/d/1LQSnOGbST5nspe6180t7rkQKB-TmpX5h/view?usp=sharing)
 
 ## Contributors
 - **GARVIT (Project Lead)**
-
-
----
-
