@@ -89,6 +89,7 @@ There are different ways to run the code for different scenarios:
      ```
    - **Second Terminal:** Run Ngrok on port 5000 (after authenticating with your Ngrok token):
      ```bash
+     ngrok authtoken your-ngrok-auth-token
      ngrok http 5000
      ```
    - **Third Terminal:** Run Streamlit UI:
