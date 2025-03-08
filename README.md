@@ -123,6 +123,7 @@ Simply run:
 | `/schedule-demo`     | `POST` | Schedules a demo session using AI  |
 
 ## Future Enhancements
+**Unfinished Features:**
 
 - **HubSpot API Integration** for retrieving customer details in the payment follow-up scenario.
 - **Sentiment Analysis** for scoring responses in the interview process.
