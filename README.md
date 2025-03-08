@@ -11,12 +11,14 @@
 - Evaluates candidate responses based on AI-powered analysis (hidden from the user).
 - Determines the **next question dynamically** based on candidate performance.
 - Stores candidate responses for further evaluation.
+- Uses **Speech Recognition System (Text-to-Speech & Speech-to-Text)** for seamless interaction.
 
 ### 2. Demo Scheduling
 - Uses AI to **detect user availability**.
 - Integrates with **Google Calendar API** to create and manage events.
 - Stores event details in a structured **JSON file**.
 - Provides instant scheduling confirmation via voice feedback.
+- Uses **Speech Recognition System (Text-to-Speech & Speech-to-Text)** to facilitate voice-based interactions.
 
 ### 3. Payment Follow-ups
 - **Automated calls** via Twilio to remind users of pending payments.
