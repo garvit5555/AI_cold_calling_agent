@@ -92,6 +92,16 @@ There are different ways to run the code for different scenarios:
      ngrok authtoken your-ngrok-auth-token
      ngrok http 5000
      ```
+     - You will get a URL in the format:
+       ```
+       Forwarding     http://abcd-1234.ngrok-free.app -> http://localhost:5000
+       ```
+       Here, the Ngrok URL is `http://abcd-1234.ngrok-free.app`, so put this in the `NGROK_URL` field in the `.env` file.
+       
+     - Copy the generated public URL from Ngrok and update the `.env` file:
+       ```ini
+       NGROK_URL=your-ngrok-public-url
+       ```
    - **Third Terminal:** Run Streamlit UI:
      ```bash
      streamlit run main.py
